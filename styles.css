@@ -127,173 +127,318 @@ body.curtain-open .hero-image-side {
   transition: width 0.12s linear;
 }
 
-/* ─── NAVBAR ULTRA-MODERNO (PREMIUM UX/UI) ──────────────────────────────── */
+/* ─── NAVBAR ───────────────────────────────────────────────────────────────*/
 #navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
-  height: 72px; /* Un poco más alto para mejorar la presencia visual */
-  background: rgba(255, 255, 255, 0.85); /* Fondo blanco traslúcido */
+  height: var(--nav-height);
+  background: rgba(250, 250, 250, 0.9);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
-  backdrop-filter: blur(12px); /* Efecto cristal difuminado premium */
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-/* En modo oscuro, adaptamos el fondo traslúcido */
 [data-theme="dark"] #navbar {
-  background: rgba(10, 15, 20, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 15, 22, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 
-/* Sombra sutil cuando el usuario hace scroll (opcional, le da profundidad) */
 #navbar.navbar--scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 24px rgba(27, 44, 94, 0.08);
+}
+[data-theme="dark"] #navbar.navbar--scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,0.45);
 }
 
 .nav-container {
-  max-width: 1300px;
+  max-width: 1320px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
-/* Logotipo / Marca del Centro */
+/* ── Marca / Logo ── */
 .nav-brand {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--navy);
-  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color var(--transition), transform 0.3s var(--ease-out);
+}
+
+.nav-brand:hover .brand-mark {
+  border-color: var(--teal);
+  transform: rotate(90deg);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
   letter-spacing: -0.01em;
   transition: color var(--transition);
 }
-[data-theme="dark"] .nav-brand { color: #E2ECF5; }
 
-.brand-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--teal);
-  border-radius: 0; /* Estricto: bordes rectos */
+[data-theme="dark"] .brand-title { color: #E2ECF5; }
+
+.brand-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
 }
 
-/* Menú de Enlaces */
+/* ── Menú de enlaces ── */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px; /* Más espacio entre opciones para el proyector */
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-mid);
-  text-decoration: none;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 8px 0;
-  position: relative; /* Necesario para la línea animada inferior */
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  position: relative;
   transition: color var(--transition);
 }
 
-/* Efecto de Línea Infinita al pasar el ratón (Hover) */
-.nav-link::after {
+/* Fondo pill en hover/activo */
+.nav-link::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: var(--teal);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  inset: 0;
+  background: rgba(42, 127, 127, 0.07);
+  transform: scaleX(0.6) scaleY(0.5);
+  opacity: 0;
+  transition: transform 0.25s var(--ease-out), opacity 0.25s ease;
 }
 
-.nav-link:hover {
-  color: var(--navy);
-}
+.nav-link:hover { color: var(--navy); text-decoration: none; }
+.nav-link:hover::before { transform: scaleX(1) scaleY(1); opacity: 1; }
 [data-theme="dark"] .nav-link:hover { color: var(--teal-light); }
 
-.nav-link:hover::after {
-  width: 100%;
-  left: 0;
+/* Estado activo: acento inferior sólido */
+.nav-link--active {
+  color: var(--teal) !important;
 }
 
-/* Botón de Modo Claro / Oscuro Rediseñado */
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 12px; right: 12px;
+  height: 2px;
+  background: var(--teal);
+}
+
+/* ── Acciones (tema + hamburger) ── */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .theme-toggle {
   background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: 0; /* Totalmente recto */
-  width: 40px;
-  height: 40px;
+  border-radius: 0;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition), border-color var(--transition);
 }
 
 .theme-toggle:hover {
-  background: var(--surface);
   border-color: var(--teal);
-  transform: translateY(-1px);
+  background: rgba(42, 127, 127, 0.08);
 }
 
-/* Ajuste del Hambuguesa (Responsive Móvil) */
-.hamburger {
-  display: none; /* Se activa en pantallas pequeñas */
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
+.theme-toggle .toggle-icon {
+  font-size: 1rem;
+  position: absolute;
+  transition: transform 0.3s var(--ease-out), opacity 0.3s ease;
 }
+
+html[data-theme="light"] .toggle-icon--moon { opacity: 0; transform: translateY(20px); }
+html[data-theme="light"] .toggle-icon--sun  { opacity: 1; transform: translateY(0); }
+html[data-theme="dark"]  .toggle-icon--sun  { opacity: 0; transform: translateY(-20px); }
+html[data-theme="dark"]  .toggle-icon--moon { opacity: 1; transform: translateY(0); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  padding: 8px;
+  transition: border-color var(--transition);
+}
+
+.hamburger:hover { border-color: var(--teal); }
 
 .hamburger span {
   display: block;
-  width: 24px;
+  width: 100%;
   height: 2px;
-  background-color: var(--text-main);
-  transition: transform 0.3s, opacity 0.3s;
+  background: var(--text-mid);
+  transition: transform 0.3s var(--ease-out), opacity 0.3s ease, background var(--transition);
+  transform-origin: center;
 }
 
-/* RESPONSIVE NAV */
+.hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger--open span:nth-child(2) { opacity: 0; }
+.hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Dot-nav lateral (solo desktop) ── */
+.section-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: calc(100vh - var(--nav-height) - 40px);
+  margin-top: calc(var(--nav-height) / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.section-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  transition: background var(--transition), transform var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.section-dot::after {
+  content: attr(title);
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%) translateX(4px);
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s var(--ease-out);
+}
+
+.section-dot:hover::after,
+.section-dot--active::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+.section-dot:hover { background: var(--teal); border-color: var(--teal); transform: scale(1.4); }
+
+.section-dot--active {
+  background: var(--teal);
+  border-color: var(--teal);
+  transform: scale(1.5);
+}
+
+/* ── Responsive Tablet ── */
 @media (max-width: 1024px) {
   .hamburger { display: flex; }
-  
+  .section-dots { display: none; }
+
   .nav-menu {
     position: fixed;
-    top: 72px;
+    top: var(--nav-height);
     right: -100%;
-    width: 280px;
-    height: calc(100vh - 72px);
+    width: 260px;
+    height: calc(100vh - var(--nav-height));
     background: var(--surface);
     border-left: 1px solid var(--border);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 40px 32px;
-    gap: 24px;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: none;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 32px 20px;
+    gap: 2px;
+    transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -12px 0 32px rgba(0,0,0,0.06);
   }
-  
+
+  [data-theme="dark"] .nav-menu {
+    box-shadow: -12px 0 32px rgba(0,0,0,0.35);
+  }
+
   .nav-menu--open { right: 0; }
-  
-  .nav-menu li { width: 100%; }
-  .nav-menu li:last-child { margin-top: 16px; } /* Separa el botón de tema abajo */
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link:last-of-type { border-bottom: none; }
+
+  .nav-link--active::after {
+    bottom: auto;
+    left: 0; right: auto;
+    top: 0; bottom: 0;
+    width: 3px;
+    height: auto;
+  }
+}
+
+/* ── Responsive Mobile ── */
+@media (max-width: 640px) {
+  .brand-sub { display: none; }
+  .nav-container { padding: 0 16px; }
 }
 /* ─── HERO ─────────────────────────────────────────────────────────────────*/
 .hero-section {

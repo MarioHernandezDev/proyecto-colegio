@@ -15,47 +15,55 @@
   <div id="progress-bar" role="progressbar" aria-label="Progreso de lectura"></div>
 
   <!-- NAVBAR -->
-  <header id="navbar">
-    <nav class="nav-container" role="navigation" aria-label="Navegación principal">
-      <a href="#inicio" class="nav-brand">
-        <span class="brand-mark">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-            <rect x="1" y="1" width="7" height="7" fill="var(--teal)"/>
-            <rect x="10" y="1" width="7" height="7" fill="var(--gold)"/>
-            <rect x="1" y="10" width="7" height="7" fill="var(--gold)"/>
-            <rect x="10" y="10" width="7" height="7" fill="var(--teal)"/>
-          </svg>
-        </span>
-        Convivencia Escolar
-      </a>
+<header id="navbar">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
 
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
-        <span class="ham-line"></span>
-        <span class="ham-line"></span>
-        <span class="ham-line"></span>
+    <a href="#inicio" class="nav-brand" aria-label="Inicio · Convivencia Escolar">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="1" y="1" width="8" height="8" fill="var(--teal)"/>
+          <rect x="11" y="1" width="8" height="8" fill="var(--gold)"/>
+          <rect x="1" y="11" width="8" height="8" fill="var(--gold)"/>
+          <rect x="11" y="11" width="8" height="8" fill="var(--teal)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-title">El Zahor</span>
+        <span class="brand-sub">Convivencia Escolar</span>
+      </span>
+    </a>
+
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a href="#inicio"      class="nav-link" data-section="inicio">Inicio</a></li>
+      <li><a href="#recreos"     class="nav-link" data-section="recreos">Recreos</a></li>
+      <li><a href="#bibliopatio" class="nav-link" data-section="bibliopatio">Bibliopatio</a></li>
+      <li><a href="#familia"     class="nav-link" data-section="familia">Familia</a></li>
+      <li><a href="#igualdad"    class="nav-link" data-section="igualdad">Igualdad</a></li>
+      <li><a href="#policromia"  class="nav-link" data-section="policromia">Policromía</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color">
+        <span class="toggle-icon toggle-icon--sun" aria-hidden="true">☀️</span>
+        <span class="toggle-icon toggle-icon--moon" aria-hidden="true">🌙</span>
       </button>
+      <button class="hamburger" id="hamburger"
+              aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
-      <ul class="nav-menu" id="nav-menu" role="list">
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#recreos" class="nav-link">Recreos Inclusivos</a></li>
-        <li><a href="#bibliopatio" class="nav-link">Bibliopatio</a></li>
-        <li><a href="#familia" class="nav-link">Día de la Familia</a></li>
-        <li>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color">
-            <span class="toggle-track">
-              <span class="toggle-thumb"></span>
-              <span class="toggle-icon toggle-icon--sun" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="2.5" fill="currentColor"/><line x1="6" y1="0" x2="6" y2="2" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="10" x2="6" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="0" y1="6" x2="2" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="1.76" y1="1.76" x2="3.17" y2="3.17" stroke="currentColor" stroke-width="1.5"/><line x1="8.83" y1="8.83" x2="10.24" y2="10.24" stroke="currentColor" stroke-width="1.5"/><line x1="10.24" y1="1.76" x2="8.83" y2="3.17" stroke="currentColor" stroke-width="1.5"/><line x1="3.17" y1="8.83" x2="1.76" y2="10.24" stroke="currentColor" stroke-width="1.5"/></svg>
-              </span>
-              <span class="toggle-icon toggle-icon--moon" aria-hidden="true">
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M9.5 7.5A5 5 0 1 1 3.5 1.5a3.5 3.5 0 0 0 6 6z" fill="currentColor"/></svg>
-              </span>
-            </span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
+  <!-- Barra de sección activa (dot-nav lateral en desktop) -->
+  <div class="section-dots" aria-hidden="true">
+    <a href="#inicio"      class="section-dot" data-target="inicio"      title="Inicio"></a>
+    <a href="#recreos"     class="section-dot" data-target="recreos"     title="Recreos"></a>
+    <a href="#bibliopatio" class="section-dot" data-target="bibliopatio" title="Bibliopatio"></a>
+    <a href="#familia"     class="section-dot" data-target="familia"     title="Día de la Familia"></a>
+    <a href="#igualdad"    class="section-dot" data-target="igualdad"    title="Igualdad"></a>
+    <a href="#policromia"  class="section-dot" data-target="policromia"  title="Policromía"></a>
+  </div>
+</header>
 
   <main>
 
@@ -226,52 +234,41 @@
     <section id="bibliopatio" class="content-section content-section--alt fade-in-section">
       <div class="section-container">
         <div class="section-label">Iniciativa 02</div>
-        <h2 class="section-title">Bibliopatio</h2>
+        <h2 class="section-title">Bibliopatio: Deja tu huella</h2>
         <div class="section-divider"></div>
-
+        
         <div class="biblio-grid-modern">
-
+          
           <div class="biblio-info-side">
             <p class="lead-text">
-              El Bibliopatio nace de la convicción de que la lectura puede —y debe— conquistar los espacios de ocio y aire libre. Junto con Juegos de mesa para alumnado que desee otro tipo de juegos.
+              Con motivo de la Semana del Libro, invitamos a las familias y al alumnado a dejar su huella donando una lectura especial. Junto con juegos y demás actividades para el alumnado que así lo prefiera :).
+            </p>
+            <p class="biblio-description">
+              Esta iniciativa nació con un propósito claro: que cada persona recomendara una historia que le hubiese emocionado, divertido o enseñado algo importante. Gracias a la extraordinaria colaboración de nuestra comunidad, hemos puesto en marcha el <strong>Bibliopatio</strong>.
+            </p>
+            <p class="biblio-description">
+              Durante los recreos, una zona del patio se transforma en un entorno de lectura libre, relajado y compartido al aire libre. Una oportunidad única para romper las barreras del aula tradicional, descubrir nuevas aventuras y viajar con la imaginación en un entorno accesible y cercano.
             </p>
             
-            <p class="biblio-description">
-              Durante los recreos, una parte del patio se transforma en un entorno de lectura abierto y espontáneo. El alumnado accede directamente a libros seleccionados, rompiendo las barreras del aula tradicional en un ambiente relajado y natural.
-            </p>
-
             <div class="biblio-features">
               <div class="feature-box">
-                <span class="feature-icon-svg" aria-hidden="true">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M4 26V8a2 2 0 0 1 2-2h20v18" stroke="var(--teal)" stroke-width="1.8"/>
-                    <path d="M4 26h20v-4H4v4z" stroke="var(--teal)" stroke-width="1.8"/>
-                    <line x1="10" y1="12" x2="22" y2="12" stroke="var(--teal)" stroke-width="1.6"/>
-                    <line x1="10" y1="16" x2="18" y2="16" stroke="var(--teal)" stroke-width="1.6"/>
-                  </svg>
-                </span>
-                <h4>Espacio Abierto</h4>
-                <p>Lectura libre al aire libre que fomenta la desconexión positiva y la concentración natural.</p>
+                <span class="feature-num">01</span>
+                <h4>Donaciones con Sentido</h4>
+                <p>Libros significativos aportados por las propias familias, creando un catálogo con valor emocional.</p>
               </div>
               <div class="feature-box">
-                <span class="feature-icon-svg" aria-hidden="true">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <circle cx="16" cy="12" r="6" stroke="var(--teal)" stroke-width="1.8"/>
-                    <path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="var(--teal)" stroke-width="1.8" stroke-linecap="square"/>
-                    <path d="M22 8l4-4M22 4l4 4" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="square"/>
-                  </svg>
-                </span>
-                <h4>Dinamización Cultural</h4>
-                <p>Microclubes de lectura espontáneos y recomendaciones directas entre alumnos de distintos cursos.</p>
+                <span class="feature-num">02</span>
+                <h4>Fomento Lector Activo</h4>
+                <p>Uso positivo de los tiempos de ocio, donde el alumnado comparte de forma espontánea el amor por la lectura.</p>
               </div>
             </div>
 
             <blockquote class="biblio-quote-modern">
-              "Un libro abierto es un cerebro que habla; cerrado, un amigo que espera."
-              <cite>— Proyecto de Fomento Lector del Centro</cite>
+              "Cada libro donado por una familia es una puerta abierta a nuevas aventuras para todo el alumnado."
+              <cite>— Campaña de la Semana del Libro · CEIP El Zahor</cite>
             </blockquote>
           </div>
-
+          
           <div class="biblio-video-side">
             <p class="video-label">Presentación Audiovisual del Proyecto</p>
             <div class="video-frame-wrapper">
@@ -280,10 +277,21 @@
                 Tu navegador no soporta la reproducción de vídeos locales.
               </video>
             </div>
-            <div class="video-caption-bar">
+            <div class="video-caption-bar" style="margin-bottom: 24px;">
               <span class="pulse-dot"></span>
               <span>Documental: Impacto del espacio lector en los descansos</span>
             </div>
+
+            <p class="video-label">Comunidad en Acción · Haz clic para ampliar</p>
+            <button class="gallery-tile" data-index="6" aria-label="Ampliar foto de donación de libros" style="width: 100%; aspect-ratio: 16 / 10; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+              <img src="assets/img/donacion-libros.jpg" alt="Familias y alumnos participando en la donación de libros durante la Semana del Libro" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;">
+                <span class="placeholder-icon">📸</span>
+                <p>Foto: assets/img/donacion-libros.jpg</p>
+                <small>Familias donando libros o rincón de lectura</small>
+              </div>
+              <div class="tile-overlay"><span>Ver Rincón de Lectura 📚</span></div>
+            </button>
           </div>
 
         </div>
@@ -393,6 +401,156 @@
       </div>
     </section>
 
+
+  <section id="igualdad" class="content-section content-section--alt fade-in-section">
+      <div class="section-container">
+        <div class="section-label">Reconocimiento Provincial</div>
+        <h2 class="section-title">Compromiso por la Igualdad</h2>
+        <div class="section-divider"></div>
+
+        <div class="biblio-grid-modern">
+          
+          <div class="biblio-info-side">
+            <p class="lead-text">
+              Sensibilización y prevención de la violencia de género a través del certamen "Araceli Morales".
+            </p>
+            
+            <div class="biblio-features">
+              <div class="feature-box">
+                <span class="feature-num">01</span>
+                <h4>Creatividad y Valores</h4>
+                <p>El alumnado ha elaborado relatos y dibujos expresando, a través de su talento, la importancia del respeto mutuo y la convivencia pacífica.</p>
+              </div>
+              
+              <div class="feature-box">
+                <span class="feature-num">02</span>
+                <h4>Implicación y Compromiso</h4>
+                <p>Los trabajos muestran la corresponsabilidad y madurez de los estudiantes en la construcción de una sociedad más justa e igualitaria.</p>
+              </div>
+
+              <div class="feature-box" style="border-left: 2px solid var(--teal); padding-left: 16px;">
+                <span class="feature-num" style="color: var(--teal);">🏆</span>
+                <h4>Alumnas Galardonadas</h4>
+                <p>Dos estudiantes de nuestro centro han sido premiadas en este certamen provincial, poniendo en valor su esfuerzo y la calidad de sus propuestas artísticas.</p>
+              </div>
+            </div>
+
+            <blockquote class="biblio-quote-modern">
+              "Nos sentimos profundamente orgullosos de todo el alumnado que, con sus obras, contribuye a transmitir un mensaje tan necesario."
+              <cite>— Dirección · CEIP El Zahor</cite>
+            </blockquote>
+          </div>
+          
+          <div class="biblio-video-side">
+            <p class="video-label">Galería de Trabajos · Haz clic para ampliar</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              
+              <button class="gallery-tile" data-index="7" aria-label="Ampliar trabajo 1" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+                <img src="assets/img/concurso1.jpg" alt="Trabajo premiado" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso1.jpg</p></div>
+                <div class="tile-overlay"><span>Ampliar Obra 🔍</span></div>
+              </button>
+
+              <button class="gallery-tile" data-index="8" aria-label="Ampliar trabajo 2" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+                <img src="assets/img/concurso2.jpg" alt="Dibujo del alumnado" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">📝</span><p>concurso2.jpg</p></div>
+                <div class="tile-overlay"><span>Ver Relato 🔍</span></div>
+              </button>
+
+              <button class="gallery-tile" data-index="9" aria-label="Ampliar trabajo 3" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+                <img src="assets/img/concurso3.jpg" alt="Mural expuesto" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso3.jpg</p></div>
+                <div class="tile-overlay"><span>Ver Mural 🔍</span></div>
+              </button>
+
+              <button class="gallery-tile" data-index="10" aria-label="Ampliar trabajo 4" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+                <img src="assets/img/concurso4.jpg" alt="Detalle de trabajos" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso4.jpg</p></div>
+                <div class="tile-overlay"><span>Ver Detalle 🔍</span></div>
+              </button>
+
+            </div>
+
+            <button class="gallery-tile" data-index="11" aria-label="Ampliar trabajo 5" style="width: 100%; aspect-ratio: 21/9; margin-top: 16px; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
+              <img src="assets/img/concurso5.jpg" alt="Fotografía colectiva" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">📸</span><p>concurso5.jpg (Mural Completo)</p></div>
+              <div class="tile-overlay"><span>Ver Entrega de Premios 🔍</span></div>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <!-- POLICROMÍA DEPORTIVA -->
+   <section id="policromia" class="content-section fade-in-section">
+      <div class="section-container">
+        <div class="section-label">Actuación Especial</div>
+        <h2 class="section-title">Policromía Deportiva</h2>
+        <div class="section-divider"></div>
+
+        <div class="biblio-grid-modern">
+          
+          <div class="biblio-info-side">
+            <p class="lead-text">
+              Deporte, diversidad y respeto: jugar en equipo siendo exactamente quienes somos.
+            </p>
+            <p class="biblio-description">
+              Gracias a la organización de nuestra compañera Carmen Romero, hemos disfrutado en el centro de la exposición <strong>"Policromía Deportiva" de Sergio Padial Fajardo</strong>. A través de sus obras, llenas de color y movimiento, el alumnado ha reflexionado sobre el deporte como un espacio donde todas las personas tienen cabida.
+            </p>
+            <p class="biblio-description">
+              Entender la diversidad en la escuela se traduce en tratar bien a todo el mundo, sin burlas ni discriminación, garantizando que cada niño y niña se sienta seguro para ser quien es. El campo, la pista o el patio son entornos perfectos para el compañerismo y el esfuerzo compartido.
+            </p>
+
+            <blockquote class="biblio-quote-modern">
+              "La diversidad nos enriquece, la igualdad de derechos nos une y el deporte nos ayuda a crecer juntos."
+              <cite>— Plan de Convivencia · CEIP El Zahor</cite>
+            </blockquote>
+          </div>
+          
+          <div class="biblio-video-side">
+            <p class="video-label">Exposición y Reflexión del Alumnado</p>
+            <div class="video-frame-wrapper" style="aspect-ratio: 16/9; background: #000;">
+              <iframe
+                src="https://www.blogger.com/video.g?token=AD6v5dyFf2PQ1s8JxTTz9hScgaRHwXbhJsBDFGnKGDAANHXoioLhg06Gih9op9PCAG9PYzD4Vsfq0d7g0SpTDHGzhkBuecZ11oTfgVNA4nU_zhBeaHaYs9sO4bzXh5mbp26Zd3NsfvM&origin=ceipelzahorniguelas.blogspot.com"
+                title="Vídeo Policromía Deportiva"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+                style="width: 100%; height: 100%; border: none;"
+              ></iframe>
+            </div>
+            <div class="video-caption-bar">
+              <span class="pulse-dot"></span>
+              <span>Evidencia: Valores inclusivos a través del arte de Sergio Padial</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="logros-grid" style="margin-top: 56px;">
+          <div class="logro-card">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🤝</div>
+            <h3>Respeto Absoluto</h3>
+            <p>Respetar a los demás es tan importante como seguir las reglas del juego. Sin excepciones.</p>
+          </div>
+          <div class="logro-card">
+            <div style="font-size: 2rem; margin-bottom: 12px;">⚖️</div>
+            <h3>Igualdad de Derechos</h3>
+            <p>Todos y todas tenemos derecho a jugar, aprender y disfrutar, sin importar nuestras diferencias.</p>
+          </div>
+          <div class="logro-card">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🏆</div>
+            <h3>El Verdadero Éxito</h3>
+            <p>Lo importante no es ganar o perder, sino jugar con compañerismo, compartir y aprender unos de otros.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -471,12 +629,20 @@
 
     // ─── LIGHTBOX (INCLUYE RECREOS Y PÓSTERS DE LA FAMILIA) ───────────────
     const galleryData = [
-      { caption: 'Cuadrante oficial de juegos de Secundaria', path: 'assets/img/recreo1.jpg' },
-      { caption: 'Cajas organizadas con el material del alumnado', path: 'assets/img/recreo2.jpg' },
-      { caption: 'Alumnado dinamizando el espacio durante el recreo inclusivo', path: 'assets/img/recreo3.jpg' },
-      { caption: 'Zonas delimitadas en la cristalera del gimnasio', path: 'assets/img/recreo4.jpg' },
-      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 1)', path: 'assets/img/poster1.jpg' },
-      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 2)', path: 'assets/img/poster2.jpg' }
+      { caption: 'Cuadrante oficial de juegos de Secundaria', path: 'assets/img/recreo1.jpg' }, // 0
+      { caption: 'Cajas organizadas con el material del alumnado', path: 'assets/img/recreo2.jpg' }, // 1
+      { caption: 'Alumnado dinamizando el espacio durante el recreo inclusivo', path: 'assets/img/recreo3.jpg' }, // 2
+      { caption: 'Zonas delimitadas en la cristalera del gimnasio', path: 'assets/img/recreo4.jpg' }, // 3
+      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 1)', path: 'assets/img/poster1.jpg' }, // 4
+      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 2)', path: 'assets/img/poster2.jpg' }, // 5
+      { caption: 'Familias y alumnos participando en la donación de libros para el Bibliopatio', path: 'assets/img/donacion-libros.jpg' }, // 6
+      
+      // NUEVOS ELEMENTOS (Índices 7 al 11)
+      { caption: 'Obra y relato galardonado a nivel provincial - Concurso Araceli Morales', path: 'assets/img/concurso1.jpg' }, // 7
+      { caption: 'Dibujos y propuestas creativas elaboradas por el alumnado de Primaria', path: 'assets/img/concurso2.jpg' }, // 8
+      { caption: 'Mural de sensibilización contra la violencia de género expuesto en el centro', path: 'assets/img/concurso3.jpg' }, // 9
+      { caption: 'Detalle de los relatos enfocados en la resolución positiva de conflictos', path: 'assets/img/concurso4.jpg' }, // 10
+      { caption: 'Comunidad educativa unida en la entrega de reconocimientos del certamen', path: 'assets/img/concurso5.jpg' }  // 11
     ];
 
     const lightbox = document.getElementById('lightbox');
@@ -584,21 +750,26 @@
       });
     });
 
-    // ─── NAVBAR: ENLACE ACTIVO AUTOMÁTICO SEGÚN LA SECCIÓN VISIBLE ────────
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // ─── NAVBAR: ENLACE ACTIVO + DOTS ACTIVOS ─────────────────────────────────
+const sections   = document.querySelectorAll('section[id]');
+const navLinks   = document.querySelectorAll('.nav-link');
+const sectionDots = document.querySelectorAll('.section-dot');
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.toggle('nav-link--active', link.getAttribute('href') === '#' + entry.target.id);
-          });
-        }
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('nav-link--active', link.dataset.section === id);
       });
-    }, { rootMargin: '-40% 0px -55% 0px' });
+      sectionDots.forEach(dot => {
+        dot.classList.toggle('section-dot--active', dot.dataset.target === id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
 
-    sections.forEach(s => sectionObserver.observe(s));
+sections.forEach(s => sectionObserver.observe(s));
   </script>
 </body>
 </html>
