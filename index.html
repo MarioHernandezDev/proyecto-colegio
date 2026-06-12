@@ -14,6 +14,21 @@
   <!-- BARRA DE PROGRESO -->
   <div id="progress-bar" role="progressbar" aria-label="Progreso de lectura"></div>
 
+  <!-- PRELOADER / TELÓN -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-mark">
+      <svg width="34" height="34" viewBox="0 0 20 20" fill="none">
+        <rect x="1" y="1" width="8" height="8" fill="var(--teal)"/>
+        <rect x="11" y="1" width="8" height="8" fill="var(--gold)"/>
+        <rect x="1" y="11" width="8" height="8" fill="var(--gold)"/>
+        <rect x="11" y="11" width="8" height="8" fill="var(--teal)"/>
+      </svg>
+      <span class="preloader-text">CEIP El Zahor</span>
+    </div>
+    <div class="curtain curtain--left"></div>
+    <div class="curtain curtain--right"></div>
+  </div>
+
   <!-- NAVBAR -->
 <header id="navbar">
   <nav class="nav-container" role="navigation" aria-label="Navegación principal">
@@ -45,8 +60,8 @@
 
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color">
-        <span class="toggle-icon toggle-icon--sun" aria-hidden="true">☀️</span>
-        <span class="toggle-icon toggle-icon--moon" aria-hidden="true">🌙</span>
+        <span class="toggle-icon toggle-icon--sun" aria-hidden="true"></span>
+        <span class="toggle-icon toggle-icon--moon" aria-hidden="true"></span>
       </button>
       <button class="hamburger" id="hamburger"
               aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
@@ -73,28 +88,24 @@
     <section id="inicio" class="hero-section">
       <div class="hero-content">
 
-        <div class="curtain curtain--left" aria-hidden="true"></div>
-
         <div class="hero-text-side">
-          <span class="hero-eyebrow" style="font-size: 1.1rem; font-weight: 700; letter-spacing: 0.12em; color: var(--teal); text-transform: uppercase; margin-bottom: 24px; display: inline-block;">
-            🏫 CEIP El Zahor · Convivencia y Comunidad
+          <span class="hero-eyebrow">
+            CEIP El Zahor · Convivencia y Comunidad
           </span>
-          
-          <h1 class="hero-title">Un patio donde<br><em class="hero-highlight">cada alumno</em><br>pertenece.</h1>
+
+          <h1 class="hero-title">Un patio donde<br><em class="hero-highlight">cada alumno</em><br>tiene su sitio.</h1>
           <p class="hero-body">
-            Transformamos los espacios de recreo en lugares de encuentro, inclusión y aprendizaje compartido. Una iniciativa diseñada por y para nuestra comunidad escolar.
+            En el CEIP El Zahor llevamos un curso trabajando para que el recreo sea, además de un descanso, un espacio de encuentro, juego y aprendizaje entre todo el alumnado. Esto es un resumen de lo que hemos hecho hasta ahora.
           </p>
           <div class="hero-actions">
             <a href="#recreos" class="btn-primary">
-              Descubrir el programa
+              Ver el programa
               <span class="btn-arrow" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
               </span>
             </a>
           </div>
         </div>
-
-        <div class="curtain curtain--right" aria-hidden="true"></div>
 
         <div class="hero-image-side">
           <img src="assets/img/hero-bg.jpg" alt="Convivencia y actividades en el patio escolar" class="hero-full-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -107,7 +118,7 @@
       </div>
 
       <div class="hero-scroll-hint" aria-hidden="true">
-        <span class="scroll-label">Explorar</span>
+        <span class="scroll-label">Sigue bajando</span>
         <span class="scroll-line"></span>
       </div>
     </section>
@@ -122,10 +133,10 @@
 
         <div class="recreos-text-top">
           <p class="lead-text">
-            Se han establecido los cuadrantes de juegos y materiales para los recreos inclusivos de Infantil, Primaria y Secundaria.
+            Tenemos organizados los cuadrantes de juegos y materiales para los recreos inclusivos de Infantil, Primaria y Secundaria.
           </p>
           <p>
-            Los alumnos responsables gestionarán las cajas de material desde la cristalera del gimnasio. Nuestra labor docente es <strong>dinamizar los juegos</strong>, controlar el material y, sobre todo, velar por un clima adecuado <strong>libre de menosprecios o agresividad</strong>, garantizando un ambiente agradable para todo el alumnado.
+            El alumnado encargado se ocupa de las cajas de material desde la cristalera del gimnasio. Por nuestra parte, el profesorado dinamiza los juegos, controla el material y vigila que el ambiente sea bueno, <strong>sin menosprecios ni agresividad</strong>, para que el recreo sea agradable para todos.
           </p>
 
           <div class="recreos-horizontal-highlights">
@@ -171,7 +182,7 @@
               </span>
               <div>
                 <strong>Clima de respeto</strong>
-                <p>Docentes atentos para velar por una convivencia positiva.</p>
+                <p>Profesorado atento para mantener una convivencia positiva.</p>
               </div>
             </div>
 
@@ -234,13 +245,13 @@
 
     <section id="inclusion-eje" class="content-section content-section--alt fade-in-section">
       <div class="section-container">
-        <div class="section-label">Identidad y Sentir del Centro</div>
+        <div class="section-label">Identidad del Centro</div>
         <h2 class="section-title">Inclusión: Un Espacio para Todos</h2>
         <div class="section-divider"></div>
 
         <div style="max-width: 850px; margin-bottom: 48px;">
           <p class="lead-text" style="font-size: 1.25rem; color: var(--navy);">
-            Nuestra propuesta pedagógica es un proyecto amplio que va mucho más allá de las acciones puntuales. Es el sentir y la identidad misma del <strong>CEIP El Zahor</strong>: crear espacios amables, inclusivos y protegidos donde todos los alumnos y alumnas se sientan seguros, valorados y puedan crecer en plenitud.
+            Más allá de actividades puntuales, esto forma parte de cómo entendemos el CEIP El Zahor: un centro donde se trabaja para que el alumnado se sienta seguro, valorado y pueda crecer con normalidad, sea como sea.
           </p>
         </div>
 
@@ -248,24 +259,24 @@
           
           <div class="biblio-info-side">
             <p class="biblio-description">
-              Coincidiendo con el 21 de marzo Día del Sindrome de Down y el 2 de abril Día del Autismo, el centro se moviliza para visibilizar la riqueza de la diversidad. A través de la campaña de los calcetines desparejados, recordamos que cada persona es única y aprende a su propio ritmo. Una filosofía respaldada por el Ayuntamiento, que ilumina de azul los edificios institucionales en apoyo a nuestra comunidad.
+              Con motivo del 21 de marzo (Día del Síndrome de Down) y el 2 de abril (Día del Autismo), el centro participa en distintas actividades para visibilizar la diversidad. Con la campaña de los calcetines desparejados recordamos que cada persona es distinta y aprende a su ritmo, una idea que también apoya el Ayuntamiento iluminando de azul algunos edificios.
             </p>
 
             <div class="biblio-features" style="margin-top: 32px; margin-bottom: 32px;">
               <div class="feature-box">
                 <span class="feature-num">01</span>
-                <h4>Celebrar la Diferencia</h4>
-                <p>La iniciativa del calcetín diferente simboliza que la riqueza del grupo radica en la individualidad de cada uno.</p>
+                <h4>Celebrar la diferencia</h4>
+                <p>El calcetín distinto recuerda que cada persona es única y eso es lo que enriquece al grupo.</p>
               </div>
               
               <div class="feature-box">
                 <span class="feature-num">02</span>
-                <h4>Entornos Accesibles (SAAC)</h4>
-                <p>Implementación de <strong>pictogramas y ayudas visuales</strong> en los patios, transformando el recreo en un espacio de comunicación universal y sin barreras.</p>
+                <h4>Entornos accesibles (SAAC)</h4>
+                <p>Pictogramas y apoyos visuales en los patios para que el recreo sea un espacio de comunicación para todos.</p>
               </div>
             </div>
 
-            <p class="video-label">"Las diferencias nos enriquecen" · Ver Vídeo</p>
+            <p class="video-label">Ver vídeo</p>
             <div class="video-frame-wrapper" style="aspect-ratio: 16/9; background: #000; margin-bottom: 8px;">
               <iframe 
                 src="https://drive.google.com/file/d/1vnwPXeKfC3rnaY0uvTfIYSiWT6L3QAAr/preview" 
@@ -276,7 +287,7 @@
             </div>
             <div class="video-caption-bar">
               <span class="pulse-dot"></span>
-              <span>Evidencia: Dinámicas y talleres de sensibilización escolar</span>
+              <span>Dinámicas y talleres de sensibilización en el centro</span>
             </div>
           </div>
           
@@ -293,10 +304,10 @@
                 <h3 style="color: var(--navy); font-size: 1.25rem; margin: 0;">Miércoles en Abierto</h3>
               </div>
               <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-main); margin-bottom: 12px;">
-                Un espacio de encuentro voluntario donde el alumnado acude durante el recreo para charlar de temas de su interés con la <strong>orientadora y la maestra de PT</strong>.
+                Un espacio voluntario al que el alumnado puede acudir en el recreo para hablar de lo que le preocupe con la <strong>orientadora y la maestra de PT</strong>.
               </p>
               <p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-mid); margin: 0;">
-                Esta iniciativa nace como una respuesta y acompañamiento directo al alumnado, reforzando la prevención y el bienestar emocional en el centro.
+                Es una forma más de acompañar al alumnado y cuidar el bienestar emocional dentro del centro.
               </p>
               
               <div style="margin-top: 16px;">
@@ -304,8 +315,7 @@
                 <div style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--border); position: relative; overflow: hidden; background: var(--bg-alt);">
                   <img src="assets/img/miercoles.jpg" alt="Aula de los Miércoles en Abierto con la orientadora y la maestra de PT" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                   <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 12px; text-align: center;">
-                    <span style="font-size: 1.2rem;">📸</span>
-                    <p style="font-size: 0.75rem; margin: 4px 0 0 0;">assets/img/miercoles.jpg</p>
+                    <p style="font-size: 0.75rem; margin: 0;">assets/img/miercoles.jpg</p>
                   </div>
                 </div>
               </div>
@@ -315,11 +325,10 @@
             <button class="gallery-tile" data-index="12" aria-label="Ampliar foto de inclusión" style="width: 100%; aspect-ratio: 16 / 10; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
               <img src="assets/img/calcetines.jpg" alt="Mural de calcetines desparejados instalados en el patio del CEIP El Zahor" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;">
-                <span class="placeholder-icon">🧦</span>
                 <p>assets/img/calcetines.jpg</p>
                 <small>Foto del rincón de inclusión o mural del centro</small>
               </div>
-              <div class="tile-overlay"><span>Ver Entorno Accesible 🧦</span></div>
+              <div class="tile-overlay"><span>Ver entorno accesible</span></div>
             </button>
 
           </div>
@@ -339,25 +348,25 @@
           
           <div class="biblio-info-side">
             <p class="lead-text">
-              Con motivo de la Semana del Libro, invitamos a las familias y al alumnado a dejar su huella donando una lectura especial. Junto con juegos y demás actividades para el alumnado que así lo prefiera :).
+              Con motivo de la Semana del Libro, invitamos a las familias y al alumnado a donar una lectura especial, además de organizar juegos y otras actividades para quien prefiera participar de esa forma.
             </p>
             <p class="biblio-description">
-              Esta iniciativa nació con un propósito claro: que cada persona recomendara una historia que le hubiese emocionado, divertido o enseñado algo importante. Gracias a la extraordinaria colaboración de nuestra comunidad, hemos puesto en marcha el <strong>Bibliopatio</strong>.
+              La idea de partida era sencilla: que cada persona recomendara una historia que le hubiera gustado, emocionado o enseñado algo. Con la colaboración de las familias y el alumnado, ha salido adelante el <strong>Bibliopatio</strong>.
             </p>
             <p class="biblio-description">
-              Durante los recreos, una zona del patio se transforma en un entorno de lectura libre, relajado y compartido al aire libre. Una oportunidad única para romper las barreras del aula tradicional, descubrir nuevas aventuras y viajar con la imaginación en un entorno accesible y cercano.
+              Durante los recreos, una zona del patio se convierte en un rincón de lectura libre al aire libre. Una forma distinta de leer, fuera del aula, donde cada uno elige su libro y su rato de lectura.
             </p>
             
             <div class="biblio-features">
               <div class="feature-box">
                 <span class="feature-num">01</span>
-                <h4>Donaciones con Sentido</h4>
-                <p>Libros significativos aportados por las propias familias, creando un catálogo con valor emocional.</p>
+                <h4>Donaciones con sentido</h4>
+                <p>Libros aportados por las propias familias, con valor para quien los recomienda.</p>
               </div>
               <div class="feature-box">
                 <span class="feature-num">02</span>
-                <h4>Fomento Lector Activo</h4>
-                <p>Uso positivo de los tiempos de ocio, donde el alumnado comparte de forma espontánea el amor por la lectura.</p>
+                <h4>Lectura en el recreo</h4>
+                <p>Una opción más para el tiempo libre, donde el alumnado comparte libros y recomendaciones.</p>
               </div>
             </div>
 
@@ -368,7 +377,7 @@
           </div>
           
           <div class="biblio-video-side">
-            <p class="video-label">Presentación Audiovisual del Proyecto</p>
+            <p class="video-label">Vídeo del proyecto</p>
             <div class="video-frame-wrapper">
               <video controls poster="assets/img/recreo1.jpg" style="width:100%; height:100%; object-fit:cover;">
                 <source src="assets/video/bibliopatio.mp4" type="video/mp4">
@@ -377,18 +386,17 @@
             </div>
             <div class="video-caption-bar" style="margin-bottom: 24px;">
               <span class="pulse-dot"></span>
-              <span>Documental: Impacto del espacio lector en los descansos</span>
+              <span>El espacio de lectura en los recreos</span>
             </div>
 
             <p class="video-label">Comunidad en Acción · Haz clic para ampliar</p>
             <button class="gallery-tile" data-index="6" aria-label="Ampliar foto de donación de libros" style="width: 100%; aspect-ratio: 16 / 10; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
               <img src="assets/img/donacion-libros.jpg" alt="Familias y alumnos participando en la donación de libros durante la Semana del Libro" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;">
-                <span class="placeholder-icon">📸</span>
                 <p>Foto: assets/img/donacion-libros.jpg</p>
                 <small>Familias donando libros o rincón de lectura</small>
               </div>
-              <div class="tile-overlay"><span>Ver Rincón de Lectura 📚</span></div>
+              <div class="tile-overlay"><span>Ver rincón de lectura</span></div>
             </button>
           </div>
 
@@ -406,10 +414,10 @@
 
         <div class="familia-intro">
           <p class="lead-text familia-lead">
-            Agradecimiento sincero a las familias y alumnado que transformaron el patio <em>codo con codo</em>.
+            Gracias a las familias y al alumnado que ayudaron a darle otra cara al patio.
           </p>
           <p>
-            En el Día de la Familia hemos logrado renovar las zonas de juego y circuitos de psicomotricidad, llenar de color los espacios y dar un ejemplo extraordinario de trabajo en equipo. El alumnado recordará siempre que su patio fue <strong>pintado por sus propias familias</strong>.
+            En el Día de la Familia renovamos las zonas de juego y los circuitos de psicomotricidad, le dimos color a varios espacios y, sobre todo, pasamos un buen rato trabajando juntos. El alumnado sabe que ese patio lo pintaron, en parte, sus propias familias.
           </p>
         </div>
 
@@ -424,8 +432,8 @@
                 <path d="M8 24h4M28 24h4" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="square"/>
               </svg>
             </div>
-            <h3>Renovación completa</h3>
-            <p>Zonas de juego y circuitos de psicomotricidad completamente renovados con la participación directa de la comunidad.</p>
+            <h3>Zonas renovadas</h3>
+            <p>Juegos y circuitos de psicomotricidad puestos al día con la ayuda de las familias.</p>
           </div>
 
           <div class="logro-card">
@@ -437,8 +445,8 @@
                 <rect x="22" y="22" width="14" height="14" stroke="var(--teal)" stroke-width="1.8"/>
               </svg>
             </div>
-            <h3>Espacios con identidad</h3>
-            <p>Murales y pinturas que transforman el patio en un entorno estimulante para el aprendizaje y la convivencia diaria.</p>
+            <h3>Color en el patio</h3>
+            <p>Murales y pintura nueva que cambian el aspecto de varios rincones del recreo.</p>
           </div>
 
           <div class="logro-card">
@@ -448,8 +456,8 @@
                 <path d="M13 20l4 4 8-8" stroke="var(--gold)" stroke-width="2" stroke-linecap="square"/>
               </svg>
             </div>
-            <h3>Sentido de pertenencia</h3>
-            <p>Una lección inolvidable sobre el cuidado de lo común: cuando participas en su creación, lo valoras y lo cuidas.</p>
+            <h3>Cuidar lo común</h3>
+            <p>Cuando participas en hacer algo, lo cuidas más. Una lección sencilla y bastante visible.</p>
           </div>
 
         </div>
@@ -457,7 +465,7 @@
         <div class="familia-media-vertical">
 
           <div class="familia-video-centered">
-            <p class="media-section-label text-center">Crónica Audiovisual de la Jornada</p>
+            <p class="media-section-label text-center">Vídeo resumen de la jornada</p>
             <div class="video-container-premium">
               <iframe
                 src="https://www.blogger.com/video.g?token=AD6v5dySGHiisomXakv_j7zzfjQUbB74VXLwLDa4XqZ7RmjpgtsHB-bTDmvi2QzCuYI3R4tfFtqPmu4ZCCIAJS8TFd7XhdUNJkqW_uZ4uIsQ6wml_7mMdK0CY3Ui58OMtMxf5mK17Cg&origin=ceipelzahorniguelas.blogspot.com"
@@ -471,17 +479,17 @@
           </div>
 
           <div class="familia-posters-bottom">
-            <p class="media-section-label">Cartelería y Difusión del Evento</p>
+            <p class="media-section-label">Carteles del evento</p>
             <div class="posters-horizontal-mosaic" role="list">
 
               <button class="gallery-tile" data-index="4" aria-label="Ampliar Póster Oficial 1" role="listitem">
                 <img src="assets/img/poster1.jpg" alt="Póster oficial 1 del Día de la Familia" class="poster-real-img gallery-img">
-                <div class="tile-overlay"><span>Ampliar Cartel 1</span></div>
+                <div class="tile-overlay"><span>Ampliar cartel 1</span></div>
               </button>
 
               <button class="gallery-tile" data-index="5" aria-label="Ampliar Póster Oficial 2" role="listitem">
                 <img src="assets/img/poster2.jpg" alt="Póster oficial 2 del Día de la Familia" class="poster-real-img gallery-img">
-                <div class="tile-overlay"><span>Ampliar Cartel 2</span></div>
+                <div class="tile-overlay"><span>Ampliar cartel 2</span></div>
               </button>
 
             </div>
@@ -492,7 +500,7 @@
         <div class="familia-cta">
           <a href="https://ceipelzahorniguelas.blogspot.com" class="btn-primary btn-blog" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="10" stroke="currentColor" stroke-width="1.6"/><line x1="5" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="1.4"/><line x1="5" y1="10" x2="9" y2="10" stroke="currentColor" stroke-width="1.4"/><line x1="5" y1="4" x2="7" y2="4" stroke="currentColor" stroke-width="1.4"/></svg>
-            Visitar nuestro Blog para ver más iniciativas
+            Más iniciativas en el blog del centro
           </a>
         </div>
 
@@ -516,64 +524,64 @@
             <div class="biblio-features">
               <div class="feature-box">
                 <span class="feature-num">01</span>
-                <h4>Creatividad y Valores</h4>
-                <p>El alumnado ha elaborado relatos y dibujos expresando, a través de su talento, la importancia del respeto mutuo y la convivencia pacífica.</p>
+                <h4>Relatos y dibujos</h4>
+                <p>El alumnado preparó relatos y dibujos sobre el respeto mutuo y la convivencia pacífica.</p>
               </div>
               
               <div class="feature-box">
                 <span class="feature-num">02</span>
-                <h4>Implicación y Compromiso</h4>
-                <p>Los trabajos muestran la corresponsabilidad y madurez del alumnado en la construcción de una sociedad más justa e igualitaria.</p>
+                <h4>Trabajo bien hecho</h4>
+                <p>Los trabajos muestran el nivel de implicación del alumnado con el tema propuesto.</p>
               </div>
 
               <div class="feature-box" style="border-left: 2px solid var(--teal); padding-left: 16px;">
-                <span class="feature-num" style="color: var(--teal);">🏆</span>
-                <h4>Alumnas Galardonadas</h4>
-                <p>Dos alumnas de nuestro centro han sido premiadas en este certamen provincial, poniendo en valor su esfuerzo y la calidad de sus propuestas artísticas.</p>
+                <span class="feature-num" style="color: var(--teal);">02</span>
+                <h4>Alumnas premiadas</h4>
+                <p>Dos alumnas de nuestro centro recibieron un premio en este certamen provincial.</p>
               </div>
             </div>
 
             <blockquote class="biblio-quote-modern">
-              "Nos sentimos profundamente orgullosos de todo el alumnado que, con sus obras, contribuye a transmitir un mensaje tan necesario."
+              "Estamos orgullosos del trabajo de todo el alumnado que ha participado en el certamen."
               <cite>— Dirección · CEIP El Zahor</cite>
             </blockquote>
           </div>
           
           <div class="biblio-video-side">
-            <p class="video-label">Galería de Trabajos · Haz clic para ampliar</p>
+            <p class="video-label">Galería de trabajos · Haz clic para ampliar</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               
               <button class="gallery-tile" data-index="7" aria-label="Ampliar trabajo 1" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
                 <img src="assets/img/concurso1.jpg" alt="Trabajo premiado" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso1.jpg</p></div>
-                <div class="tile-overlay"><span>Ampliar Obra 🔍</span></div>
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><p>concurso1.jpg</p></div>
+                <div class="tile-overlay"><span>Ampliar</span></div>
               </button>
 
               <button class="gallery-tile" data-index="8" aria-label="Ampliar trabajo 2" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
                 <img src="assets/img/concurso2.jpg" alt="Dibujo del alumnado" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">📝</span><p>concurso2.jpg</p></div>
-                <div class="tile-overlay"><span>Ver Relato 🔍</span></div>
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><p>concurso2.jpg</p></div>
+                <div class="tile-overlay"><span>Ver relato</span></div>
               </button>
 
               <button class="gallery-tile" data-index="9" aria-label="Ampliar trabajo 3" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
                 <img src="assets/img/concurso3.jpg" alt="Mural expuesto" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso3.jpg</p></div>
-                <div class="tile-overlay"><span>Ver Mural 🔍</span></div>
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><p>concurso3.jpg</p></div>
+                <div class="tile-overlay"><span>Ver mural</span></div>
               </button>
 
               <button class="gallery-tile" data-index="10" aria-label="Ampliar trabajo 4" style="width: 100%; aspect-ratio: 4/3; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
                 <img src="assets/img/concurso4.jpg" alt="Detalle de trabajos" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">🎨</span><p>concurso4.jpg</p></div>
-                <div class="tile-overlay"><span>Ver Detalle 🔍</span></div>
+                <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><p>concurso4.jpg</p></div>
+                <div class="tile-overlay"><span>Ver detalle</span></div>
               </button>
 
             </div>
 
             <button class="gallery-tile" data-index="11" aria-label="Ampliar trabajo 5" style="width: 100%; aspect-ratio: 21/9; margin-top: 16px; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer;">
               <img src="assets/img/concurso5.jpg" alt="Fotografía colectiva" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><span class="placeholder-icon">📸</span><p>concurso5.jpg (Mural Completo)</p></div>
-              <div class="tile-overlay"><span>Ver Entrega de Premios 🔍</span></div>
+              <div class="hero-fallback-placeholder" style="position: static; height: 100%; display: none;"><p>concurso5.jpg (entrega de premios)</p></div>
+              <div class="tile-overlay"><span>Ver entrega de premios</span></div>
             </button>
 
           </div>
@@ -593,13 +601,13 @@
           
           <div class="biblio-info-side">
             <p class="lead-text">
-              Deporte, diversidad y respeto: jugar en equipo siendo exactamente quienes somos.
+              Deporte, diversidad y respeto: jugar en equipo siendo quienes somos.
             </p>
             <p class="biblio-description">
-              Gracias a la organización de nuestra compañera Carmen Romero, hemos disfrutado en el centro de la exposición <strong>"Policromía Deportiva" de Sergio Padial Fajardo</strong>. A través de sus obras, llenas de color y movimiento, el alumnado ha reflexionado sobre el deporte como un espacio donde todas las personas tienen cabida.
+              Gracias a la organización de nuestra compañera Carmen Romero, pudimos ver en el centro la exposición <strong>"Policromía Deportiva" de Sergio Padial Fajardo</strong>. A partir de sus obras, el alumnado reflexionó sobre el deporte como un espacio donde todo el mundo tiene cabida.
             </p>
             <p class="biblio-description">
-              Entender la diversidad en la escuela se traduce en tratar bien a todo el mundo, sin burlas ni discriminación, garantizando que cada niño y niña se sienta seguro para ser quien es. El campo, la pista o el patio son entornos perfectos para el compañerismo y el esfuerzo compartido.
+              Entender la diversidad en la escuela significa tratar bien a todo el mundo, sin burlas ni exclusión, para que cada niño y niña se sienta seguro siendo como es. El campo, la pista o el patio son sitios para el compañerismo y el esfuerzo compartido.
             </p>
 
             <blockquote class="biblio-quote-modern">
@@ -609,7 +617,7 @@
           </div>
           
           <div class="biblio-video-side">
-            <p class="video-label">Exposición y Reflexión del Alumnado</p>
+            <p class="video-label">Exposición y reflexión del alumnado</p>
             <div class="video-frame-wrapper" style="aspect-ratio: 16/9; background: #000;">
               <iframe
                 src="https://www.blogger.com/video.g?token=AD6v5dyFf2PQ1s8JxTTz9hScgaRHwXbhJsBDFGnKGDAANHXoioLhg06Gih9op9PCAG9PYzD4Vsfq0d7g0SpTDHGzhkBuecZ11oTfgVNA4nU_zhBeaHaYs9sO4bzXh5mbp26Zd3NsfvM&origin=ceipelzahorniguelas.blogspot.com"
@@ -623,7 +631,7 @@
             </div>
             <div class="video-caption-bar">
               <span class="pulse-dot"></span>
-              <span>Evidencia: Valores inclusivos a través del arte de Sergio Padial</span>
+              <span>Valores inclusivos a través del arte de Sergio Padial</span>
             </div>
           </div>
 
@@ -631,19 +639,16 @@
 
         <div class="logros-grid" style="margin-top: 56px;">
           <div class="logro-card">
-            <div style="font-size: 2rem; margin-bottom: 12px;">🤝</div>
-            <h3>Respeto Absoluto</h3>
-            <p>Respetar a los demás es tan importante como seguir las reglas del juego. Sin excepciones.</p>
+            <h3>Respeto, sin excepciones</h3>
+            <p>Respetar a los demás es tan importante como seguir las reglas del juego.</p>
           </div>
           <div class="logro-card">
-            <div style="font-size: 2rem; margin-bottom: 12px;">⚖️</div>
-            <h3>Igualdad de Derechos</h3>
+            <h3>Igualdad de derechos</h3>
             <p>Todos y todas tenemos derecho a jugar, aprender y disfrutar, sin importar nuestras diferencias.</p>
           </div>
           <div class="logro-card">
-            <div style="font-size: 2rem; margin-bottom: 12px;">🏆</div>
-            <h3>El Verdadero Éxito</h3>
-            <p>Lo importante no es ganar o perder, sino jugar con compañerismo, compartir y aprender unos de otros.</p>
+            <h3>Lo importante</h3>
+            <p>No es ganar o perder, sino jugar con compañerismo y aprender unos de otros.</p>
           </div>
         </div>
 
@@ -668,7 +673,7 @@
         <strong>Programa de Convivencia Escolar</strong>
       </div>
       <p class="footer-copy">
-        © 2026 Centro Educativo · Todos los derechos reservados · Hecho con dedicación por la comunidad educativa
+        © 2026 CEIP El Zahor · Niguelas
       </p>
     </div>
   </footer>
@@ -679,15 +684,19 @@
   </button>
 
  <script>
-    // ─── TELÓN CINEMÁTICO DEL HERO ─────────────────────────────────────────
-    // Esperamos a que el DOM esté listo, luego lanzamos la animación de apertura
-    document.addEventListener('DOMContentLoaded', () => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          document.body.classList.remove('curtain-active');
-          document.body.classList.add('curtain-open');
-        });
-      });
+    // ─── PRELOADER / TELÓN DE APERTURA ─────────────────────────────────────
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      // pequeño margen para que se vea el logo un instante, aunque cargue rápido
+      setTimeout(() => {
+        document.body.classList.remove('curtain-active');
+        document.body.classList.add('curtain-open');
+        preloader.addEventListener('transitionend', (e) => {
+          if (e.target === preloader) preloader.remove();
+        }, { once: false });
+        // por si transitionend no salta en algún navegador
+        setTimeout(() => preloader.remove(), 1600);
+      }, 350);
     });
 
     // ─── BARRA DE PROGRESO ────────────────────────────────────────────────
@@ -733,17 +742,15 @@
       { caption: 'Cajas organizadas con el material del alumnado', path: 'assets/img/recreo2.jpg' }, // 1
       { caption: 'Alumnado dinamizando el espacio durante el recreo inclusivo', path: 'assets/img/recreo3.jpg' }, // 2
       { caption: 'Zonas delimitadas en la cristalera del gimnasio', path: 'assets/img/recreo4.jpg' }, // 3
-      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 1)', path: 'assets/img/poster1.jpg' }, // 4
-      { caption: 'Cartelería oficial de difusión del Día de la Familia (Opción 2)', path: 'assets/img/poster2.jpg' }, // 5
+      { caption: 'Cartel de difusión del Día de la Familia (opción 1)', path: 'assets/img/poster1.jpg' }, // 4
+      { caption: 'Cartel de difusión del Día de la Familia (opción 2)', path: 'assets/img/poster2.jpg' }, // 5
       { caption: 'Familias y alumnos participando en la donación de libros para el Bibliopatio', path: 'assets/img/donacion-libros.jpg' }, // 6
       { caption: 'Obra y relato galardonado a nivel provincial - Concurso Araceli Morales', path: 'assets/img/concurso1.jpg' }, // 7
       { caption: 'Dibujos y propuestas creativas elaboradas por el alumnado de Primaria', path: 'assets/img/concurso2.jpg' }, // 8
       { caption: 'Mural de sensibilización contra la violencia de género expuesto en el centro', path: 'assets/img/concurso3.jpg' }, // 9
       { caption: 'Detalle de los relatos enfocados en la resolución positiva de conflictos', path: 'assets/img/concurso4.jpg' }, // 10
       { caption: 'Comunidad educativa unida en la entrega de reconocimientos del certamen', path: 'assets/img/concurso5.jpg' }, // 11
-      
-      // NUEVO ELEMENTO (Índice 12)
-      { caption: 'Iniciativa del calcetín desparejado: simbolizando la riqueza de nuestra diversidad', path: 'assets/img/calcetines.jpg' } // 12
+      { caption: 'Iniciativa del calcetín desparejado, en torno a la diversidad', path: 'assets/img/calcetines.jpg' } // 12
     ];
 
     const lightbox = document.getElementById('lightbox');
@@ -808,7 +815,6 @@
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       
-      // Control de la sombra del Navbar ultra-moderno
       if (scrollTop > 20) {
         navbar.classList.add('navbar--scrolled');
       } else {
@@ -823,7 +829,6 @@
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger de tarjetas dentro de la sección cuando aparece
           const cards = entry.target.querySelectorAll('.logro-card, .highlight-item, .feature-box');
           cards.forEach((card, idx) => {
             card.style.transitionDelay = `${idx * 80}ms`;
